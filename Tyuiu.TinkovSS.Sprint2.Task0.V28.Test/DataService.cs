@@ -1,19 +1,19 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib;
+using Tyuiu.YourSurnameII.Sprint2.Task0.V28.Lib;
 
-namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Test
+namespace Tyuiu.YourSurnameII.Sprint2.Task0.V28.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void GetCompareOperations_ReturnsSixFalseValues()
+        public void GetCompareOperations_Variant28_ReturnsSixFalseValues()
         {
             // Подготовка исходных данных.
+            DataService dataService = new DataService();
+
             int x = 111;
             int y = 735;
-
-            DataService dataService = new DataService();
 
             bool[] expected = new bool[]
             {
@@ -25,11 +25,38 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Test
                 false
             };
 
-            // Вызов метода библиотеки.
+            // Выполнение метода библиотеки.
             bool[] actual = dataService.GetCompareOperations(x, y);
 
-            // Проверка длины массива, значений и порядка элементов.
+            // Проверка результата, длины массива и порядка элементов.
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GetCompareOperations_EqualInputs_UsesPassedArguments()
+        {
+            // Дополнительная проверка:
+            // метод должен вычислять результат из аргументов,
+            // а не всегда возвращать шесть значений false.
+            DataService dataService = new DataService();
+
+            int x = 10;
+            int y = 10;
+
+            bool[] expected = new bool[]
+            {
+                true,
+                true,
+                false,
+                false,
+                false,
+                true
+            };
+
+            bool[] actual = dataService.GetCompareOperations(x, y);
+
             CollectionAssert.AreEqual(expected, actual);
         }
     }
+}
 }

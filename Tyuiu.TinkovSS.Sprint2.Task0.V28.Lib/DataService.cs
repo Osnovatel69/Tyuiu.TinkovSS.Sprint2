@@ -1,6 +1,6 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
 
-namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib
+namespace Tyuiu.YourSurnameII.Sprint2.Task0.V28.Lib
 {
     public class DataService : ISprint2Task0V28
     {
@@ -8,12 +8,12 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib
         {
             return new bool[]
             {
-                x + 1 == y,
-                x + y != y + x,
+                x == y,
+                x != y - 624,
                 x + y < y,
-                x > y + 1,
+                x > y,
                 x + y <= y,
-                x >= y + 1
+                x >= y
             };
         }
     }
