@@ -18,10 +18,10 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28
             Console.WriteLine("* Выполнил: Тинков С. С.                                                   *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Используя арифметические выражения и операции сравнения                  *");
-            Console.WriteLine("* ==, !=, <, >, <=, >= в указанном порядке, получить массив:                *");
-            Console.WriteLine("* (False, False, False, False, False, False)                               *");
-            Console.WriteLine("* при x = 111, y = 735.                                                    *");
+            Console.WriteLine("* Написать программу из операций сравнения и арифметических выражений.    *");
+            Console.WriteLine("* Порядок операций: ==, !=, <, >, <=, >=.                                  *");
+            Console.WriteLine("* Получить массив: (False, False, False, False, False, False)               *");
+            Console.WriteLine("* при x = 111 и y = 735.                                                   *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
@@ -29,11 +29,11 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28
             int x = 111;
             int y = 735;
 
-            Console.WriteLine("x = " + x);
-            Console.WriteLine("y = " + y);
+            Console.WriteLine("x = {0}", x);
+            Console.WriteLine("y = {0}", y);
 
-            DataService ds = new DataService();
-            bool[] result = ds.GetCompareOperations(x, y);
+            DataService dataService = new DataService();
+            bool[] result = dataService.GetCompareOperations(x, y);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");

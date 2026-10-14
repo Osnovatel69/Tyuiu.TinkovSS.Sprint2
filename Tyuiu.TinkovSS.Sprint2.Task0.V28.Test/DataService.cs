@@ -9,11 +9,11 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Test
         [TestMethod]
         public void GetCompareOperations_ReturnsSixFalseValues()
         {
-            // Исходные данные.
+            // Подготовка исходных данных.
             int x = 111;
             int y = 735;
 
-            DataService ds = new DataService();
+            DataService dataService = new DataService();
 
             bool[] expected = new bool[]
             {
@@ -25,10 +25,10 @@ namespace Tyuiu.TinkovSS.Sprint2.Task0.V28.Test
                 false
             };
 
-            // Выполнение.
-            bool[] actual = ds.GetCompareOperations(x, y);
+            // Вызов метода библиотеки.
+            bool[] actual = dataService.GetCompareOperations(x, y);
 
-            // Проверка всего массива и порядка элементов.
+            // Проверка длины массива, значений и порядка элементов.
             CollectionAssert.AreEqual(expected, actual);
         }
     }
