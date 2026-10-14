@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using Tiyiu.TinkovSS.Sprint2.Task0.V28.Lib;
+using Tyuiu.TinkovSS.Sprint2.Task0.V28.Lib;
 
-namespace Tiyiu.TinkovSS.Sprint2.Task0.V28
+namespace Tyuiu.TinkovSS.Sprint2.Task0.V28
 {
     internal class Program
     {
